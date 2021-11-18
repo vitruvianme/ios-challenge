@@ -12,6 +12,8 @@ struct ExerciseRow: View {
 struct Exercises: View {
     @State var exercises: [Exercise] = []
 
+    private var api = API()
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -28,11 +30,5 @@ struct Exercises: View {
                 print("Error: \(error)")
             }
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Exercises()
     }
 }
